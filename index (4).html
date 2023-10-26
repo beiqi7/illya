@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>Illya Best Girl!</title>
+
+  <script src="imagelist.json"></script>
+  
+  <style>
+    .container {
+      position: relative; 
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    img {
+      width: 27.5%;
+      height: auto;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+<div class="container">
+
+  <div style="padding: 10px; background: rgba(0,0,0,0.8); border: 3px solid; border-color: #fff #333 #333 #fff; box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff; border-radius: 10px;">
+    <img id="image" style="width: 100%; height: auto;">
+  </div>
+
+  <button id="random">随机一张</button>
+
+</div>
+
+  <script>
+    // 获取随机图片索引
+    let index = Math.floor(Math.random() * images.length);
+    // 显示随机图片
+    showImage(index);
+    
+    function showImage(index) {
+      document.getElementById('image').src = images[index];
+    }
+    
+    
+    // 随机按钮逻辑
+    document.getElementById('random').addEventListener('click', () => {
+      index = Math.floor(Math.random() * images.length);
+      showImage(index);
+    });
+  </script>
+  
+  <div id="overlay"></div> 
+
+  <script>
+    // 获取随机图片索引
+    let index = Math.floor(Math.random() * images.length);
+    // 显示随机图片
+    showImage(index);
+    
+    function showImage(index) {
+      document.getElementById('image').src = images[index];
+    }
+    
+    
+    // 随机按钮逻辑
+    document.getElementById('random').addEventListener('click', () => {
+      index = Math.floor(Math.random() * images.length);
+      showImage(index);
+    });
+  </script>
+  
+  <div id="overlay"></div> 
+
+
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.5);">
+
+  <video autoplay muted loop id="bgvid" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; -webkit-filter: blur(5px);-moz-filter: blur(5px);-o-filter: blur(5px);-ms-filter: blur(5px);filter: blur(5px);">
+    <source src="asset/illya.webm" type="video/webm">
+  </video>
+
+</div>
+
+
+<footer style="position: absolute; bottom: 0; width: 100%; height: 50px;">
+
+  <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  
+    <div class="counter" style="text-align: center; color: yellow;">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+      <span id="busuanzi_container_site_pv">
+        Got illya'd <span id="busuanzi_value_site_pv"></span> times
+      </span>
+    </div>
+  
+  </div>
+  
+</footer>
+  
+</body>
+</html>
