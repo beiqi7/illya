@@ -37,6 +37,22 @@
 
   <button id="random">随机一张</button>
 
+<style>
+#random {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #6200EE;
+  color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  transition: .3s;
+}
+
+#random:hover {
+  background: #3700B3;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+</style>
+
 </div>
 
   <script>
@@ -92,18 +108,46 @@
 <footer style="position: absolute; bottom: 0; width: 100%; height: 50px;">
 
   <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-  
+
     <div class="counter" style="text-align: center; color: yellow;">
+
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-      <span id="busuanzi_container_site_pv">
+      <span id="busuanzi_container_site_pv" class="a">
         Got illya'd <span id="busuanzi_value_site_pv"></span> times
       </span>
+
     </div>
+
+  </div>  
+
+</footer>
+
+<style>
+.a {
+  color:#E05FFF;
+  text-decoration: none; 
+  font-size:2em;
+  font-family:ui-rounded;
+  -webkit-animation: shine 2.4s infinite;  
+}
+
+@-webkit-keyframes shine{
+  0%,100%{
+    color:#d847ff;
+    text-shadow:0 0 10px #E05FFF,0 0 10px #E05FFF;
+  }
+  50%{
+     text-shadow:0 0 10px #E05FFF,0 0 40px #E05FFF;
+  }
+}
+</style>
   
   </div>
   
 </footer>
+  
+<script async src="https://tongji.kae.su/script.js" data-website-id="52a8a4dd-e681-4b5b-b699-08f0d9efb61a"></script>
   
 </body>
 </html>
